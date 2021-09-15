@@ -9,20 +9,20 @@ public class Main3 {
         String[] numbers = m.split(" ");
         int sum = 0;
         for (String i : numbers) {
-            sum += Integer.valueOf(i);
+            sum += Integer.parseInt(i);
         }
         System.out.println("Сумма элементов с помощью цикла for: " + sum);
         sum = 0;
         int l = numbers.length - 1;
         while (l != -1) {
-            sum += Integer.valueOf(numbers[l]);
+            sum += Integer.parseInt(numbers[l]);
             l--;
         }
         System.out.println("Сумма элементов с помощью цикла while: " + sum);
         sum = 0;
         l++;
         do {
-            sum += Integer.valueOf(numbers[l]);
+            sum += Integer.parseInt(numbers[l]);
             l++;
         } while (l < numbers.length);
         System.out.println("Сумма элементов с помощью цикла do while: " + sum);
