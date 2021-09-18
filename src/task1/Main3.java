@@ -3,13 +3,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/* Написать программу, в результате которой считается сумма элементов
+целочисленного массива с помощью циклов for, while, do while, результат
+выводится на экран. */
+
 public class Main3 {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         System.out.println("Введите массив из целых чисел. (Завершение - Ctrl+D)");
 
         //Заполнение списка числами, вводимыми пользователем.
-        List<Integer> nList = new ArrayList<Integer>();
+        List<Integer> nList = new ArrayList<>();
         while (s.hasNextInt()) {
             nList.add(s.nextInt());
         }
