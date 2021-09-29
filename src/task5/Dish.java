@@ -1,6 +1,6 @@
 package task5;
 
-public abstract class Dish {
+abstract class Dish {
     private final String material;
     private final int price;
     public Dish(String material, int price){

@@ -1,6 +1,6 @@
 package task5;
 
-public class Plate extends Dish {
+class Plate extends Dish {
     private int radius;
 
 

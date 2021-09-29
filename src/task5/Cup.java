@@ -1,6 +1,6 @@
 package task5;
 
-public class Cup extends Dish {
+class Cup extends Dish {
     private final int volume;
 
     public Cup(String material, int price, int volume){
