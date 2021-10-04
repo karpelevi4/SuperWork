@@ -1,12 +1,10 @@
 package task6.nameable;
 
-import task6.nameable.Nameable;
-
 public class Car implements Nameable {
-    String name;
-    int price;
+    private String name;
+    private int price;
 
-    Car (String n, int p) {
+    public Car (String n, int p) {
         name = n;
         price = p;
     }

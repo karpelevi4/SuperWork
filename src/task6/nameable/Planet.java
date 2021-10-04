@@ -1,10 +1,10 @@
 package task6.nameable;
 
 public class Planet implements Nameable {
-    String name;
-    String weight;
+    private String name;
+    private String weight;
 
-    Planet (String n, String w) {
+    public Planet (String n, String w) {
         name = n;
         weight = w;
     }

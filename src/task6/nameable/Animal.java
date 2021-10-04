@@ -3,10 +3,10 @@ package task6.nameable;
 import task6.nameable.Nameable;
 
 public class Animal implements Nameable {
-    String name;
-    int age;
+    private String name;
+    private int age;
 
-    Animal (String n, int a) {
+    public Animal (String n, int a) {
         name = n;
         age = a;
     }
