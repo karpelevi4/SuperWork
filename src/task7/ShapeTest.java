@@ -25,7 +25,10 @@ public class ShapeTest {
         System.out.println(s3.getArea());
         System.out.println(s3.getPerimeter());
         System.out.println(s3.getColor());
-        System.out.println(s3.getLength());
+        /*System.out.println(s3.getLength()); -невозможно вызвать метод getLength() класса Rectangle,
+                                                так как после восходящего преобразования (расширения)
+                                                теряется доступ к методам подкласса
+         */
         Rectangle r1 = (Rectangle) s3; // downcast
         System.out.println(r1);
         System.out.println(r1.getArea());
@@ -35,14 +38,22 @@ public class ShapeTest {
         System.out.println(s4);
         System.out.println(s4.getArea());
         System.out.println(s4.getColor());
-        System.out.println(s4.getSide());
+        /*System.out.println(s4.getSide()); -невозможно вызвать метод getSide() класса Square,
+                                                так как после восходящего преобразования (расширения)
+                                                теряется доступ к методам подкласса
+         */
         // Take note that we downcast Shape s4 to Rectangle,
         // which is a superclass of Square, instead of Square
         Rectangle r2 = (Rectangle) s4;
         System.out.println(r2);
         System.out.println(r2.getArea());
         System.out.println(r2.getColor());
-        System.out.println(r2.getSide());
+        /*System.out.println(r2.getSide());  -невозможно воспользоваться методом getSide(), так как
+                                             он определён в классе Square, а метод вызывается к объекту
+                                             класса Rectangle (родитель класса Square);
+                                             базовый класс не имеет доступ к методам производного класса
+
+         */
         System.out.println(r2.getLength());
         // Downcast Rectangle r2 to Square
         Square sq1 = (Square) r2;
