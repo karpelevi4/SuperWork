@@ -1,8 +1,7 @@
-package task5;
+package task5.dish;
 
 class Plate extends Dish {
     private int radius;
-
 
     public Plate(String material, int price, int radius){
         super(material, price);

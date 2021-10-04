@@ -1,4 +1,4 @@
-package task5;
+package task5.dish;
 
 public class TestClass {
     public static void main(String[] args){

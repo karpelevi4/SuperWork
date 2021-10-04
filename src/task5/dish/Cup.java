@@ -1,7 +1,7 @@
-package task5;
+package task5.dish;
 
 class Cup extends Dish {
-    private final int volume;
+    private int volume;
 
     public Cup(String material, int price, int volume){
         super(material, price);
