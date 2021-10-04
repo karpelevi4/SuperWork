@@ -1,4 +1,4 @@
-package task6;
+package task6.nameable;
 
 public class Planet implements Nameable {
     String name;

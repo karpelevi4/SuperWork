@@ -1,4 +1,4 @@
-package task6;
+package task6.nameable;
 
 public class Main {
     public static void main (String args[]) {

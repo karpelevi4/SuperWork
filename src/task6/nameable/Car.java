@@ -1,4 +1,6 @@
-package task6;
+package task6.nameable;
+
+import task6.nameable.Nameable;
 
 public class Car implements Nameable {
     String name;
