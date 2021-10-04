@@ -4,7 +4,10 @@ public abstract class Shape {
     protected String color;
     protected boolean filled;
 
-    public Shape() {};
+    public Shape() {
+        this.color = "black";
+        this.filled = false;
+    };
     public Shape (String color, boolean filled) {
         this.color = color;
         this.filled = filled;
@@ -33,8 +36,6 @@ public abstract class Shape {
     public String toString() {
         return "Shape{" +
                 "color='" + color + '\'' +
-                ", filled=" + filled +
-                ", color='" + color + '\'' +
                 ", filled=" + filled +
                 '}';
     }
