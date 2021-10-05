@@ -1,4 +1,4 @@
-package task4;
+package task4.author;
 
 public class Author {
     private String name;
