@@ -1,4 +1,4 @@
-package task3;
+package task3.circle;
 
 public class Circle {
     private double radius;
