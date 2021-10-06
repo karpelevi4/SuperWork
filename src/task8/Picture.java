@@ -1,5 +1,8 @@
 package task8;
 
+//Создайте окно, отобразите в нем картинку,
+// путь к которой указан в аргументах командной строки.
+
 import javafx.application.Application;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
