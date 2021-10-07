@@ -1,10 +1,10 @@
 package task9;
 
 import javafx.application.Application;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.Group;
-import javafx.scene.text.Text;
 
 public class Main extends Application{
 
@@ -15,19 +15,21 @@ public class Main extends Application{
 
     @Override
     public void start(Stage stage) {
+        Button milanButton = new Button("Милан");
 
-        // установка надписи
-        Text text = new Text("Hello METANIT.COM!");
-        text.setLayoutY(80);    // установка положения надписи по оси Y
-        text.setLayoutX(80);   // установка положения надписи по оси X
+        Button madridButton = new Button("Мадрид");
+        madridButton.setLayoutX(200); //размещение кнопки "Мадрид"
 
-        Group group = new Group(text);
+        Group root = new Group(madridButton, milanButton);
 
-        Scene scene = new Scene(group);
+
+        root.getChildren().addAll();
+
+        Scene scene = new Scene(root, 250, 100);
         stage.setScene(scene);
-        stage.setTitle("JavaFX Application");
-        stage.setWidth(300);
-        stage.setHeight(250);
+        stage.setTitle("Результаты матчей (Милан и Мадрид)");
+        stage.setWidth(800);
+        stage.setHeight(600);
         stage.show();
     }
 }
