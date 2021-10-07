@@ -15,11 +15,6 @@ public class Main extends Application{
 
     @Override
     public void start(Stage stage) {
-        int milanPoints = 0;
-        int madridPoints = 0;
-
-        Team milan = new Team("Милан", 0, 0);
-        Team madrid = new Team("Мадрид", 60, 60);
 
         /*
         Button milanButton = new Button("Милан");
@@ -29,16 +24,17 @@ public class Main extends Application{
         madridButton.setLayoutX(60);
          */
 
+
+        /*
         Label resultLabel = new Label("Result: " + milanPoints + " X " + madridPoints);
         resultLabel.setLayoutY(50);
-
-//        Result result = new Result(milan, madrid, 0, 50);
 
         Label lastScorerLabel = new Label("Last Scorer: N/A");
         lastScorerLabel.setLayoutY(100);
 
         Label winnerLabel = new Label("Winner: DRAW");
         winnerLabel.setLayoutY(150);
+         */
 
         /*
         milanButton.setOnAction(value ->  {
@@ -54,11 +50,19 @@ public class Main extends Application{
 
          */
 
-        Group root = new Group();
+        Team milan = new Team("Милан", 0, 0);
+        Team madrid = new Team("Мадрид", 60, 0);
 
+        Result result = new Result(milan, madrid, 0, 50);
+        LastScorer lastScorer = new LastScorer(milan, madrid, 0, 100);
+        Winner winner = new Winner(milan, madrid, 0, 150);
+
+        Group root = new Group();
         root.getChildren().add(milan.getButton());
         root.getChildren().add(madrid.getButton());
-//        root.getChildren().add(result.getLabel());
+        root.getChildren().add(result.label);
+        root.getChildren().add(lastScorer.label);
+        root.getChildren().add(winner.label);
 
         Scene scene = new Scene(root);
         stage.setScene(scene);

@@ -28,4 +28,8 @@ public class Team {
     public Button getButton() {
         return button;
     }
+
+    public String getName() {
+        return name;
+    }
 }
