@@ -5,8 +5,6 @@ import javafx.scene.control.Label;
 public abstract class myLabel {
 
     protected Label label;
-//    protected int labelPositionX;
-//    protected int labelPositionY;
     protected Team firstTeam;
     protected Team secondTeam;
 
