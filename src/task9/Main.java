@@ -1,9 +1,6 @@
 package task9;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -16,17 +13,13 @@ public class Main extends Application{
         launch(args);
     }
 
-    public static void updatePoints(int points) {
-        points++;
-    }
-
     @Override
     public void start(Stage stage) {
         int milanPoints = 0;
         int madridPoints = 0;
 
         Team milan = new Team("Милан", 0, 0);
-        Team madrid = new Team("Милан", 60, 0);
+        Team madrid = new Team("Мадрид", 60, 60);
 
         /*
         Button milanButton = new Button("Милан");
@@ -36,8 +29,10 @@ public class Main extends Application{
         madridButton.setLayoutX(60);
          */
 
-        Label resaultLabel = new Label("Result: " + milanPoints + " X " + madridPoints);
-        resaultLabel.setLayoutY(50);
+        Label resultLabel = new Label("Result: " + milanPoints + " X " + madridPoints);
+        resultLabel.setLayoutY(50);
+
+//        Result result = new Result(milan, madrid, 0, 50);
 
         Label lastScorerLabel = new Label("Last Scorer: N/A");
         lastScorerLabel.setLayoutY(100);
@@ -61,7 +56,9 @@ public class Main extends Application{
 
         Group root = new Group();
 
-        root.getChildren().add(madrid.getButton(), madrid.getButton());
+        root.getChildren().add(milan.getButton());
+        root.getChildren().add(madrid.getButton());
+//        root.getChildren().add(result.getLabel());
 
         Scene scene = new Scene(root);
         stage.setScene(scene);

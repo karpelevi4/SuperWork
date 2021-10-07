@@ -13,5 +13,9 @@ public abstract class myLabel {
         this.label.setLayoutX(labelPositionX);
     }
 
+    public Label getLabel() {
+        return label;
+    }
+
     public abstract void updateLabelText();
 }

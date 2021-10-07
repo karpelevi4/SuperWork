@@ -6,17 +6,14 @@ public class Result extends myLabel {
 
     private Team firstTeam;
     private Team secondTeam;
-    private int labelPositionX;
-    private int labelPositionY;
-    private Label label;
 
     public Result(Team firstTeam, Team secondTeam, int labelPositionX, int labelPositionY) {
 
         super(labelPositionX, labelPositionY);
-        this.label.setText("Result: " + firstTeam.getPoints() + " X " + secondTeam.getPoints());
+        this.getLabel().setText("Result: " + firstTeam.getPoints() + " X " + secondTeam.getPoints());
     }
 
     public void updateLabelText() {
-        this.label.setText("Result: " + firstTeam.getPoints() + " X " + secondTeam.getPoints());
+        this.getLabel().setText("Result: " + firstTeam.getPoints() + " X " + secondTeam.getPoints());
     }
 }

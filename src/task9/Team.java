@@ -13,7 +13,7 @@ public class Team {
         this.name = name;
         this.button = new Button(name);
         this.button.setLayoutX(buttonPositionX);
-        this.button.setLayoutX(buttonPositionY);
+        this.button.setLayoutY(buttonPositionY);
         this.button.setFocusTraversable(false);
     }
 
