@@ -24,8 +24,6 @@ public class Play extends Application {
         Button clear = new Button("Clear");
         clear.setLayoutY(100);
 
-        stage.setTitle("HBox Experiment 1");
-
         TextField textField = new TextField();
 
 
@@ -35,6 +33,7 @@ public class Play extends Application {
         root.getChildren().add(submit);
         root.getChildren().add(clear);
         stage.setScene(new Scene(root));
+        stage.setTitle("HBox Experiment 1");
         stage.setHeight(400);
         stage.setWidth(600);
         stage.show();
