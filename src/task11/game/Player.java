@@ -14,4 +14,24 @@ public class Player {
         this.numberOfTries = 0;
         this.possibleNumber = 0;
     }
+    
+    public void setPossibleNumber(int possibleNumber) {
+        this.possibleNumber = possibleNumber;
+    }
+    
+    public int getPossibleNumber() {
+        return possibleNumber;
+    }
+    
+    public void updateNumberOfTries() {
+        this.numberOfTries++;
+    }
+    
+    public int getNumberOfTries() {
+        return numberOfTries;
+    }
+    
+    public int getNumberToGuess() {
+        return numberToGuess;
+    }
 }
