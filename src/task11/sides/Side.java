@@ -20,7 +20,7 @@ public class Side {
 		canvas.setLayoutY(positionY);
 		
 		gc = canvas.getGraphicsContext2D();
-		gc.setFill(Color.web("hsl(" + Math.random() * 360 + ", 50%, 75%)"));
+		gc.setFill(Color.web("hsl(" + Math.random() * 360 + ", 50%, 80%)"));
 		gc.fillRect(0, 0, 200, 200);
 		gc.setFill(Color.BLACK);
 		gc.fillText(name, 20, 20);
