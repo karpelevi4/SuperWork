@@ -7,57 +7,52 @@ import javafx.scene.Scene;
 import javafx.scene.Group;
 
 public class Main extends Application{
+	
+	private Result result;
+	private LastScorer lastScorer;
+	private Winner winner;
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        launch(args);
-    }
+		launch(args);
+	}
 
-    public void update(Team team, Result result, LastScorer lastScorer, Winner winner) {
-        team.updatePoints();
-        result.updateLabelText();
-        lastScorer.setLastScorer(team);
-        lastScorer.updateLabelText();
-        winner.updateLabelText();
-    }
+	public void update(Team team) {
+		team.updatePoints();
+		result.updateLabelText();
+		lastScorer.setLastScorer(team);
+		lastScorer.updateLabelText();
+		winner.updateLabelText();
+	}
 
-    public void addToGroup(Group root, Team firstTeam, Team secondTeam,
-        Result result, LastScorer lastScorer,Winner winner) {
-        root.getChildren().add(firstTeam.getButton());
-        root.getChildren().add(secondTeam.getButton());
-        root.getChildren().add(result.label);
-        root.getChildren().add(lastScorer.label);
-        root.getChildren().add(winner.label);
-    }
+	public void setSceneAndStage(Stage stage, Scene scene) {
+		stage.setScene(scene);
+		stage.setTitle("Результаты матчей (Милан и Мадрид)");
+		stage.setWidth(800);
+		stage.setHeight(600);
+		stage.setResizable(false);
+		scene.setFill(Color.web("#AFEEEE"));
+		stage.show();
+	}
 
-    public void setSceneAndStage(Stage stage, Scene scene) {
-        stage.setScene(scene);
-        stage.setTitle("Результаты матчей (Милан и Мадрид)");
-        stage.setWidth(800);
-        stage.setHeight(600);
-        stage.setResizable(false);
-        scene.setFill(Color.web("#AFEEEE"));
-        stage.show();
-    }
+	@Override
+	public void start(Stage stage) {
 
-    @Override
-    public void start(Stage stage) {
+		Team milan = new Team("Милан", 340, 200);
+		Team madrid = new Team("Мадрид", 400, 200);
 
-        Team milan = new Team("Милан", 340, 200);
-        Team madrid = new Team("Мадрид", 400, 200);
+		result = new Result(milan, madrid, 350, 250);
+		lastScorer = new LastScorer(milan, madrid, 350, 300);
+		winner = new Winner(milan, madrid, 350, 350);
 
-        Result result = new Result(milan, madrid, 350, 250);
-        LastScorer lastScorer = new LastScorer(milan, madrid, 350, 300);
-        Winner winner = new Winner(milan, madrid, 350, 350);
+		milan.getButton().setOnAction(e-> update(milan));
 
-        milan.getButton().setOnAction(e-> update(milan, result, lastScorer, winner));
+		madrid.getButton().setOnAction(e-> update(madrid));
 
-        madrid.getButton().setOnAction(e-> update(madrid, result, lastScorer, winner));
+		Group root = new Group();
+        root.getChildren().addAll(result.label, lastScorer.label, winner.label, milan.getButton(), madrid.getButton());
 
-        Group root = new Group();
-        addToGroup(root, milan, madrid, result, lastScorer, winner);
-
-        Scene scene = new Scene(root);
-        setSceneAndStage(stage, scene);
-    }
+		Scene scene = new Scene(root);
+		setSceneAndStage(stage, scene);
+	}
 }

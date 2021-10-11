@@ -16,8 +16,13 @@ public class Play extends Application {
 		launch(args);
 	}
 	
-	public void setGame(Group root, Stage stage, Button submit,
-	                    Button clear, TextField textField, Label label) {
+	private Group root;
+	private Button submit;
+	private Button clear;
+	private TextField textField;
+	private Label label;
+	
+	public void setGame(Stage stage) {
 		
 		submit.setLayoutY(50);
 		submit.setLayoutX(15);
@@ -48,13 +53,13 @@ public class Play extends Application {
 	@Override
 	public void start(Stage stage) throws Exception {
 
-		Button submit = new Button("Submit");
+		submit = new Button("Submit");
 
-		Button clear = new Button("Clear");
+		clear = new Button("Clear");
 
-		TextField textField = new TextField();
+		textField = new TextField();
 
-		Label label = new Label();
+		label = new Label();
 		
 		Player player = new Player();
 		Game game = new Game(player, textField, label);
@@ -63,7 +68,7 @@ public class Play extends Application {
 
 		clear.setOnAction(e -> textField.clear());
 
-		Group root = new Group();
-		setGame(root, stage, submit, clear, textField, label);
+		root = new Group();
+		setGame(stage);
 	}
 }
