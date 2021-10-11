@@ -34,10 +34,7 @@ public class Play extends Application {
 		
 		root.setLayoutY(100);
 		root.setLayoutX(200);
-		root.getChildren().add(textField);
-		root.getChildren().add(submit);
-		root.getChildren().add(clear);
-		root.getChildren().add(label);
+		root.getChildren().addAll(textField, submit, clear, label);
 		Scene scene = new Scene(root);
 		stage.setScene(scene);
 		scene.setFill(Color.web("#A18FD6"));
