@@ -41,6 +41,7 @@ public class Figures extends Application {
         }
         root.getChildren().add(canvas);
         primaryStage.setScene(new Scene(root));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 }

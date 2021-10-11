@@ -35,6 +35,7 @@ public class Main extends Application{
         stage.setTitle("Результаты матчей (Милан и Мадрид)");
         stage.setWidth(800);
         stage.setHeight(600);
+        stage.setResizable(false);
         scene.setFill(Color.web("#AFEEEE"));
         stage.show();
     }

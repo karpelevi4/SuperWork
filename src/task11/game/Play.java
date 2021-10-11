@@ -41,6 +41,7 @@ public class Play extends Application {
 		stage.setTitle("Guess the number");
 		stage.setHeight(400);
 		stage.setWidth(600);
+		stage.setResizable(false);
 		stage.show();
 	}
 

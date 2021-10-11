@@ -46,6 +46,7 @@ public class Picture extends Application {
         stage.setTitle("Picture");
         stage.setWidth(300);
         stage.setHeight(250);
+        stage.setResizable(false);
         stage.show();
     }
 }

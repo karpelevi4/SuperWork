@@ -65,6 +65,7 @@ public class Animation extends Application {
         stage.setTitle("Picture");
         stage.setWidth(300);
         stage.setHeight(300);
+        stage.setResizable(false);
         stage.show();
     }
 }
