@@ -1,6 +1,6 @@
 package task9;
 
-public class Result extends myLabel {
+public class Result extends MyLabel {
 
     public Result(Team firstTeam, Team secondTeam, int labelPositionX, int labelPositionY) {
 

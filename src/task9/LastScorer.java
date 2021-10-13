@@ -1,6 +1,6 @@
 package task9;
 
-public class LastScorer extends myLabel {
+public class LastScorer extends MyLabel {
 
     private String lastScorer;
 
